@@ -1,0 +1,240 @@
+hhtml, body, div, span, iframe, object, noscript,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address, cite, img, small, strong, b, u, i,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, nav, output, ruby, section,
+mark, audio, video{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+body, html{
+    background:fixed url(../img/background.jpg) bottom right #131313;
+    color:#c7c5c7;
+    font-size:16px;
+    font-family: Helvetica,Arial,sans-serif;
+    height:100%;
+}
+
+a{
+    color:#de8b04;
+    text-decoration:none;
+}
+a:hover{
+    color:#c70a0a;
+}
+
+h1, h2{
+    font-size: 18px;
+    font-weight: normal;
+    margin:24px 0 28px;
+}
+
+.container {
+	min-height:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position:relative;
+}
+.container:after{
+	display:block;
+	content:" ";
+	height:36px;
+}
+
+header{
+    color:#c2c2c2;
+    min-height:98px;
+    padding:16px 0 0;
+    position:relative;
+}
+
+.h-group{
+    padding:14px 0 0 10px;
+    line-height:32px;
+}
+
+.sitename{
+    font-size:37px;
+    font-weight:bold;
+    margin:0;
+}
+.sitename a, h1 a, h2 a{
+    color:inherit;
+}
+.sitename a:hover, h1 a:hover, h4 a:hover{
+    color:inherit;
+}
+
+.search{
+    width:230px;
+    line-height:32px;
+    position:absolute;
+    right:0;
+    bottom:12px;
+}
+
+.search label{
+    color:#d1cfd1;
+    font-size: 22px;
+    font-weight:bold;
+}
+input#search{
+    line-height:16px;
+    height:16px;
+    width:160px;
+}
+.btn{
+    background:#888;
+    border-style:none solid solid none;
+    border-width: 0 1px 1px 0;
+    border-color:#aaa;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    padding:2px 4px 3px;
+    font-size:13px;
+    color:#181818;
+}
+.btn:hover{
+    background:#de8b04;
+}
+
+nav>ul{
+    background:#121212;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    border-bottom:1px solid #de8b04;
+    padding:0 2%;
+    list-style:none;
+}
+nav>ul>li{
+	background:#121212;
+	height:39px;
+	display:inline-block;
+	padding:6px 0 0;
+	vertical-align:bottom;
+	position:relative;
+
+}
+
+.inner_menu{
+    position:absolute;
+    top:27px;
+    background:#333;
+    list-style:none;
+    display:none;
+    width:180px;
+    z-index:5;
+}
+nav>ul>li:hover>ul{
+    display:block;
+}
+nav>ul>li>a{
+    display:inline-block;
+    line-height:32px;
+    color:#dbd4db;
+    -webkit-border-radius:8px 8px 0 0;
+    -moz-border-radius:8px 8px 0 0;
+    border-radius:8px 8px 0 0;
+    background:inherit;
+    padding:0 12px;
+}
+nav a:hover, nav a.activated{
+    background:#333;
+    color: #dbd4db;
+}
+.inner_menu a{
+    display:inline-block;
+    height:100%;
+    width:100%;
+    color:#dbd4db;
+    padding:9px 15px;
+}
+.inner_menu a:hover{
+    background:#252525;
+}
+
+.middle{
+    position:relative;
+    margin:10px 0 0;
+}
+
+.sidebar{
+    display:inline-block;
+    width:28%;
+    border-left:1px solid #333;
+    position:absolute;
+    right:0;
+    padding:30px 0;
+}
+.sidebar h4{
+    background:#121212;
+    color:#888;
+    font-size: 16px;
+    padding:8px 10px 4px;
+    margin-bottom:22px;
+}
+.sidebar p{
+    margin:0 6% 4%;
+}
+
+.content{
+    display:inline-block;
+    width:72%;
+    padding:0 0 0 10px;
+}
+
+#archmain{
+    margin:0 auto;
+    text-align:center;
+    padding:30px 0;
+}
+#archmain img{
+    width:614px;
+    height:400px;
+}
+
+.caps{
+    text-transform:uppercase;
+}
+
+footer{
+	margin:-36px auto 0;
+    max-width: 1200px;
+	color:#555;
+	text-align:center;
+	height:36px;
+	line-height:28px;
+}
+
+@media screen and (max-width:979px){
+	#archmain img{
+		width:84%;
+		height:84%;
+	}
+}
+
+@media screen and (max-width:649px){
+	.header{
+		height:auto;
+	}
+	.header, .search, .middle, .sidebar{
+		position:static;
+	}
+
+	.search{
+		margin:0 0 12px 10px;
+	}
+
+	.content, .sidebar{
+		display:block;
+		width:auto;
+	}
+}
